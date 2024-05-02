@@ -52,7 +52,7 @@ module.exports = {
     getAllImages: async function (req, res, next){
         try {
             //find all characters from characters collection i db
-            let characters = await APIcharacter.find();
+            let characters = await APIgallery.find();
             // save the read in middleware variable
             res.locals.characters = characters;
             next();

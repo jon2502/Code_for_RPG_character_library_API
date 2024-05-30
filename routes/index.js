@@ -32,5 +32,9 @@ router.get('/gallery/:character', con.getCharacterImages, function(req, res) {
   res.json({ character: res.locals.character})
 });
 
+router.get('/downloads', con.getDownloads, function(req, res) {
+  res.json({ downloads: res.locals.downloads})
+})
+
 
 module.exports = router;

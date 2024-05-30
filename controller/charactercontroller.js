@@ -71,5 +71,14 @@ module.exports = {
         } catch (error) {
             res.status(400).json(error.message);
         }
+    },
+    getDownloads: async function (req, res, next) {
+        try {
+            let downloads = await APIdownloads.find()
+            res.locals.downloads = downloads
+            next();
+        } catch (error) {
+            res.status(400).json(error.message);
+        }
     }
 }
